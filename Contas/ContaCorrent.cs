@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using bytebank.Titular;
 /* Criação de classe public, tornado valores publicos */
 namespace bytebank.Contas {
-    public class ContaCorrente{
+
+  
+    public class ContaCorrente{  
+        public static int TotalDeContasCriadas { get; private set; }
         private int numero_agencia;
         public int Numeero_agencia{
             get{ return this.numero_agencia;}
-            set{
+            private set{
                 if(value > 0){
                     this.numero_agencia = value;
                 }
@@ -61,6 +64,12 @@ namespace bytebank.Contas {
         public double GetSaldo(){
             return this.saldo;
         }
-        
+         public ContaCorrente(int numero_agencia, string numero_conta)
+        {
+            this.Numeero_agencia = numero_agencia;
+            this.Conta = numero_conta;
+            TotalDeContasCriadas++;
+        }
     }
+   
 }

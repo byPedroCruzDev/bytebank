@@ -48,16 +48,31 @@ contaPedrin.numero_agencia = 15;
 contaPedrin.conta = "xxx-x";
 contaPedrin.saldo = 25;
 
- */
-ContaCorrente conta2 = new ContaCorrente();
+/* ContaCorrente conta2 = new ContaCorrente();
 conta2.Titular = new Client();
 conta2.Titular.Nome = "Pedrin borba";
 conta2.Titular.Cpf = "051845488";
 conta2.Titular.Profissao = "Web dev";
-conta2.Numeero_agencia = 15;
+conta2.Numeero_agencia = 15; 
 conta2.Conta = "1547-x";
 conta2.SetSaldo(1000);
+ */
 
-Console.WriteLine($"Saldo da conta do {conta2.Titular.Nome}: R${conta2.GetSaldo()}, Profissão: {conta2.Titular.Profissao}");
+//Console.WriteLine($"Saldo da conta do {conta2.Titular.Nome}: R${conta2.GetSaldo()}, Profissão: {conta2.Titular.Profissao}");
 
 
+ContaCorrente conta4 = new ContaCorrente(18, "1515-b");
+conta4.SetSaldo(500);
+conta4.Titular = new Client();
+
+
+ContaCorrente conta5 = new ContaCorrente(18, "1515-b");
+conta5.SetSaldo(500);
+conta5.Titular = new Client();
+
+ 
+ContaCorrente conta6 = new ContaCorrente(18, "1515-b");
+conta5.SetSaldo(500);
+conta5.Titular = new Client();
+
+Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
